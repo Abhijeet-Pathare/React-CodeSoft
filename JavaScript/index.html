@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+        "use strict"; //see the use of this checks errors
+        //d= 98 --> strict mode will not allow this statement as d is not defined using let,var,const
         //  var a = 34;
         //  var a = 35;
         // const b = 36;
@@ -21,10 +23,11 @@
         // undefined
         // null
 
+        //functions
         function hello(){
             console.log("Hey Abhijeet");
         }
-
+        //Objects
         let objA = {
             r:34,
             m:64,
@@ -32,9 +35,65 @@
                 console.log("the number is "+number);
             }
         }
+        
+        //event listenrs
+        document.addEventListener("click",function click(){
+            console.log("cliked");
+            //alert("Hello"); //gives alert popoup
+            let conf = confirm("Are you sure?");// gives warning pop up asks yes no
+            //console.log(conf);
+        })
+
+        //slice,substr, lastindexof, indexof etc methods
+        //array method: foreach, map, reverse etc 
+        let arr = [34,21,23];//creating an array 
+        
+         //difference between normal function and arrow functions
+        // console.log(this);//allows --> window object
+        // function myFunc(number){
+        //     console.log("The number is "+ this);
+        // }
+        // myFunc();
+
+
+        // let  myFunc= (number) =>{
+        //     console.log("the number is "+this);// we can see global winfow func in this case
+        // }
+        // myFunc();
+
+        let mobj = {
+            a:this,
+            myFunc: function(number){//(number) =>{ //normal function gives object mObj this not window object 
+            console.log("the number is "+this);// we can see global winfow func in this case
+        }
+    }
+    mobj.myFunc();
+    console.log(mobj.a);
+       //call mobj.myFunc() in console to check the op
+
+        // arr.forEach(element=> {
+        //  console.log(element);
+        // })
+
+        //dates --> date methods check on google
+        
+        //callBack --->is a function when the work is already done
+        setTimeout(() =>{
+            console.log("yaaay"); // this will execute after 3seconds 
+        },3000);
+        console.log("mai neeche wali script huun!");
+
+        //promises: mai ek cheez karne wale hun aur jaise hi wo cheez puri ho jayegi
+        //waise hi mai ek function ko run kr dunga
+        //promise resolve ya reject hoti hai
+        
+
+
+       
+
     </script>
 </head>
 <body>
-   I am learning js
+   <h1>I am learning js</h1>
 </body>
 </html>
