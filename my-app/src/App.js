@@ -12,7 +12,7 @@ function App() {
       {/* <Navbar/> */}
       <div className="container">
         <TextForm heading="Enter the text to analyze below"/>
-        <About />
+        {/* <About /> */}
       </div>
 
     </>

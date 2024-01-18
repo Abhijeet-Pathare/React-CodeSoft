@@ -1,0 +1,21 @@
+/* Units in CSS
+Absolute & Relative -> km.cm/mm/inch
+
+pixels (px)
+    96px = 1 inch = 2.54 cm
+    font-size: 2px
+
+Line Height property:
+Text Transofrm property : casing change
+--> uppercase/lowecase/capitalize/none
+*/
+
+#one {
+    font-size: 25px;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+#three {
+    font-size: 10px;
+}
